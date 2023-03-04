@@ -1,33 +1,35 @@
+[tool.poetry]
+name = "tts"
+version = "0.1.0"
+description = ""
+authors = ["Yuri Sim <yuriosim@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+numpy = ">=1.18,<1.23"
+scipy = "^1.10.1"
+Cython = "0.29.28"
+torch = "^1.13.1"
+torchaudio = "^0.13.1"
+soundfile = "^0.12.1"
+librosa = "0.8.0"
+numba = "0.55.2"
+inflect = "5.6.0"
+tqdm = "^4.65.0"
+anyascii = "^0.3.1"
+PyYAML = "^6.0"
+fsspec = "^2023.3.0"
+packaging = "^23.0"
+Flask = "^2.2.3"
+pysbd = "^0.3.4"
+umap-learn = "0.5.1"
+pandas = "^1.5.3"
+matplotlib = "^3.7.1"
+trainer = "0.0.20"
+coqpit = "^0.0.17"
+
+
 [build-system]
-requires = ["setuptools", "wheel", "cython==0.29.28", "numpy==1.21.6", "packaging"]
-
-[flake8]
-max-line-length=120
-
-[tool.black]
-line-length = 120
-target-version = ['py39']
-exclude = '''
-
-(
-  /(
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
-    | \.hg
-    | \.mypy_cache
-    | \.tox
-    | \.venv
-    | _build
-    | buck-out
-    | build
-    | dist
-  )/
-  | foo.py           # also separately exclude a file named foo.py in
-                     # the root of the project
-)
-'''
-
-[tool.isort]
-line_length = 120
-profile = "black"
-multi_line_output = 3
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
