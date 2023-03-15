@@ -30,6 +30,9 @@ trainer = "0.0.20"
 coqpit = "^0.0.17"
 
 
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.21.2"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
