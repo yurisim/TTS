@@ -6,7 +6,7 @@ authors = ["Yuri Sim <yuriosim@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.11"
+python = ">=3.8,<3.11"
 numpy = ">=1.18,<1.23"
 scipy = "^1.10.1"
 Cython = "0.29.28"
@@ -32,6 +32,10 @@ coqpit = "^0.0.17"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.21.2"
+black = "^23.1.0"
+coverage = "^7.2.1"
+isort = "^5.12.0"
+pylint = "2.10.2"
 
 [build-system]
 requires = ["poetry-core"]

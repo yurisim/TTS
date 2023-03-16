@@ -12,10 +12,19 @@ tts = TTS(model_name, gpu=True, progress_bar=True)
 # Run TTS
 # ❗ Since this model is multi-speaker and multi-lingual, we must set the target speaker and the language
 # Text to speech with a numpy output
-wav = tts.tts("This is a test! This is also a test!!", speaker=tts.speakers[0], language=tts.languages[0])
+# wav = tts.tts(
+#     "This is a test! This is also a test!!",
+#     speaker=tts.speakers[0],
+#     language=tts.languages[0],
+# )
 
 # Text to speech to a file
-tts.tts_to_file(text="Say something", speaker=tts.speakers[0], language=tts.languages[0], file_path="output.wav")
+tts.tts_to_file(
+    text="Hall your mother's chest hair has too many braids",
+    speaker=tts.speakers[0],
+    language=tts.languages[0],
+    file_path="output.wav",
+)
 
 # # Running a single speaker model
 
@@ -23,4 +32,3 @@ tts.tts_to_file(text="Say something", speaker=tts.speakers[0], language=tts.lang
 # tts = TTS(model_name="tts_models/de/thorsten/tacotron2-DDC", progress_bar=False, gpu=False)
 # # Run TTS
 # tts.tts_to_file(text="Ich bin eine Testnachricht.", file_path="OUTPUT_PATH.wav")
-
